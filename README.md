@@ -1,4 +1,4 @@
-# To test install using:
+# To install codebase:
 ```console
     semitable@machine:~$ git clone git@github.com:uoe-agents/uoe-rl2021.git
     semitable@machine:~$ cd uoe-rl2021
