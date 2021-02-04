@@ -10,6 +10,7 @@ from rl2021.exercise3.replay import ReplayBuffer
 
 RENDER = False
 
+### TUNE HYPERPARAMETERS HERE ###
 PENDULUM_CONFIG = {
     "env": "Pendulum-v0",
     "target_return": -300.0,

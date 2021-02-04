@@ -11,29 +11,13 @@ from rl2021.exercise3.replay import ReplayBuffer
 
 RENDER = False # FALSE FOR FASTER TRAINING / TRUE TO VISUALIZE ENVIRONMENT DURING EVALUATION
 
-LUNARLANDER_CONFIG = {
-    "env": "LunarLander-v2",
-    "episode_length": 500,
-    "max_timesteps": 300000,
-    "max_time": 120 * 60,
-    "eval_freq": 5000, # HOW OFTEN WE EVALUATE (AND RENDER IF RENDER=TRUE)
-    "eval_episodes": 5,  # DECREASING THIS MIGHT REDUCE EVALUATION ACCURACY; BUT MAKES IT EASIER TO SEE HOW THE POLICY EVOLVES OVER TIME (BY ENABLING RENDER ABOVE)
-    "learning_rate": 1e-2,
-    "hidden_size": (128, 64),
-    "target_update_freq": 5000,
-    "batch_size": 10,
-    "gamma": 0.99,
-    "buffer_capacity": int(1e6),
-    "plot_loss": False,
-    "save_filename": "dqn_lunarlander_latest.pt",
-}
-
+### TUNE HYPERPARAMETERS HERE ###
 CARTPOLE_CONFIG = {
     "env": "CartPole-v1",
     "episode_length": 200,
     "max_timesteps": 20000,
     "max_time": 30 * 60,
-    "eval_freq": 1000,
+    "eval_freq": 1000, # HOW OFTEN WE EVALUATE (AND RENDER IF RENDER=TRUE)
     "eval_episodes": 5,
     "learning_rate": 1e-2,
     "hidden_size": (128,64),
@@ -43,6 +27,23 @@ CARTPOLE_CONFIG = {
     "buffer_capacity": int(1e6),
     "plot_loss": False, # SET TRUE FOR 3.3 (Understanding the Loss)
     "save_filename": None,
+}
+
+LUNARLANDER_CONFIG = {
+    "env": "LunarLander-v2",
+    "episode_length": 500,
+    "max_timesteps": 300000,
+    "max_time": 120 * 60,
+    "eval_freq": 5000,
+    "eval_episodes": 5,  # DECREASING THIS MIGHT REDUCE EVALUATION ACCURACY; BUT MAKES IT EASIER TO SEE HOW THE POLICY EVOLVES OVER TIME (BY ENABLING RENDER ABOVE)
+    "learning_rate": 1e-2,
+    "hidden_size": (128, 64),
+    "target_update_freq": 5000,
+    "batch_size": 10,
+    "gamma": 0.99,
+    "buffer_capacity": int(1e6),
+    "plot_loss": False,
+    "save_filename": "dqn_lunarlander_latest.pt",
 }
 
 

@@ -9,6 +9,7 @@ from rl2021.exercise3.agents import Reinforce
 RENDER = False # FALSE FOR FASTER TRAINING / TRUE TO VISUALIZE ENVIRONMENT DURING EVALUATION
 
 
+### TUNE HYPERPARAMETERS HERE ###
 CARTPOLE_CONFIG = {
     "env": "CartPole-v1",
     "episode_length": 200,
