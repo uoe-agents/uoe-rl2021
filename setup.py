@@ -16,10 +16,11 @@ setup(
     ],
     install_requires=[
         "numpy>=1.18",
-        "torch>=1.3" "gym>=0.12",
+        "torch>=1.3",
+        "gym>=0.12",
         "gym[box2d]",
         "tqdm>=4.41",
-        "pyglet>=1.3",
+        "pyglet==1.5.0",
         "matplotlib>=3.1",
         "pytest>=5.3",
     ],
