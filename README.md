@@ -39,7 +39,7 @@ cd uoe-rl2021
 pip install -e .
 ```
 
-## FYI Your Forks are PUBLIC!
+## CAREFUL! Your Forks are PUBLIC!
 Forks in github are public, and usually easy to find by clicking the number next to your forks.
 
 If you want to mirror the repository you can do it this way: https://help.github.com/articles/duplicating-a-repository/ and don't forget to make it private afterwards.
