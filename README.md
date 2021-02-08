@@ -58,7 +58,7 @@ or just clone and work locally.
 
 ## PyTest
 
-The test folder contains a few tests that should all pass for full marks. They include checks for usage of correct variable names and the existance of files.
+Tests include checks for usage of correct variable names, the existance of files, and the types of function return values. Please, make sure your solutions pass the public tests.
 To run them, navigate to the main folder `uoe-rl2021
 and run:
 ```bash
