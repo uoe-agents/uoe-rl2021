@@ -7,7 +7,7 @@ https://www.learn.ed.ac.uk/webapps/blackboard/content/listContentEditable.jsp?co
 
 ## Installation Instructions tested in a new DICE account
 
-# You can also find instructions in the coursework description (Section 3)
+You can also find instructions in the coursework description (Section 3)
 
 Open the terminal and write:
 
