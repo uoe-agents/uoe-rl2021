@@ -1,8 +1,6 @@
 from .mdp import MDP, Transition, State, Action
 from gym.envs.registration import register
 
-register(id="rps-v0", entry_point="rl2021.utils.rps:RPS")
-
 register(
     id="FrozenLakeNotSlippery-v0",
     entry_point="gym.envs.toy_text:FrozenLakeEnv",
