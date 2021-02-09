@@ -65,4 +65,20 @@ and run:
 pytest -v
 ```
 
+## FAQ
+- mkvirtualenv and others appear to not be installed?
+In case you do not have installed virtualenv and its wrappers you should run (tested on DICE):
+```bash
+pip3 install virtualenv virtualenvwrapper
+```
+Then add the following lines at the end of your `.bashrc` file (found in your home directory)
+```
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
+source $HOME/.local/bin/virtualenvwrapper.sh
+```
+You should then restart your shell or run `source .bashrc`
+
+
 
