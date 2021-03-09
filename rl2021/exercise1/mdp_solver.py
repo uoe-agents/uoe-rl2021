@@ -153,7 +153,7 @@ class PolicyIteration(MDPSolver):
         return np.array(V)
 
     def _policy_improvement(self) -> Tuple[np.ndarray, np.ndarray]:
-        """Computes one policy improvement iteration
+        """Computes policy iteration until a stable policy is reached
 
         **YOU MUST IMPLEMENT THIS FUNCTION FOR Q1**
 

@@ -8,7 +8,7 @@ import torch.nn.functional as F
 from torch.distributions import Normal
 
 from rl2021.exercise3.agents import Agent
-from rl2021.exercise3.networks import FCNetwork
+from rl2021.exercise3.networks import FCNetwork, Tanh2
 from rl2021.exercise3.replay import Transition
 
 
@@ -56,10 +56,10 @@ class DDPG(Agent):
         #  BUILD YOUR NETWORKS AND OPTIMIZERS HERE  #
         # ######################################### #
         self.actor = FCNetwork(
-            (STATE_SIZE, *policy_hidden_size, ACTION_SIZE), output_activation=torch.nn.Tanh
+            (STATE_SIZE, *policy_hidden_size, ACTION_SIZE), output_activation=Tanh2
         )
         self.actor_target = FCNetwork(
-            (STATE_SIZE, *policy_hidden_size, ACTION_SIZE), output_activation=torch.nn.Tanh
+            (STATE_SIZE, *policy_hidden_size, ACTION_SIZE), output_activation=Tanh2
         )
 
         self.actor_target.hard_update(self.actor)

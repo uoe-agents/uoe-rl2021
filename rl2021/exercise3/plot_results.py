@@ -106,7 +106,7 @@ if __name__ == "__main__":
             x_min = 0
             x_max = config["max_timesteps"]
             if env_name.lower() == "lunarlander":
-                plt.hlines(y=190, xmin=x_min, xmax=x_max, colors='k', linestyles='dotted', label="LunarLander threshold")
+                plt.hlines(y=195, xmin=x_min, xmax=x_max, colors='k', linestyles='dotted', label="LunarLander threshold")
                 axes.set_ylim([-200,200])
             elif env_name.lower() == "cartpole":
                 plt.hlines(y=195, xmin=x_min, xmax=x_max, colors='k', linestyles='dotted', label="Cartpole threshold")

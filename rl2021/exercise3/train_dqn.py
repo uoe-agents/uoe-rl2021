@@ -8,8 +8,10 @@ import matplotlib.pyplot as plt
 from rl2021.exercise3.agents import DQN
 from rl2021.exercise3.replay import ReplayBuffer
 
-
 RENDER = False # FALSE FOR FASTER TRAINING / TRUE TO VISUALIZE ENVIRONMENT DURING EVALUATION
+
+CARTPOLE_MAX_EPISODE_STEPS = 200 # USED FOR EVALUATION / DO NOT CHANGE
+LUNARLANDER_MAX_EPISODE_STEPS = 500 # USED FOR EVALUATION / DO NOT CHANGE
 
 ### TUNE HYPERPARAMETERS HERE ###
 CARTPOLE_CONFIG = {
@@ -143,6 +145,13 @@ def train(env: gym.Env, config, output: bool = True) -> Tuple[List[float], List[
 
             if timesteps_elapsed % config["eval_freq"] < episode_timesteps:
                 eval_returns = 0
+                if config["env"] == "CartPole-v1":
+                    max_steps = CARTPOLE_MAX_EPISODE_STEPS
+                elif config["env"] == "LunarLander-v2":
+                    max_steps = LUNARLANDER_MAX_EPISODE_STEPS
+                else:
+                    raise ValueError(f"Unknown environment {config['env']}")
+
                 for _ in range(config["eval_episodes"]):
                     _, episode_return, _ = play_episode(
                         env,
@@ -151,7 +160,7 @@ def train(env: gym.Env, config, output: bool = True) -> Tuple[List[float], List[
                         train=False,
                         explore=False,
                         render=RENDER,
-                        max_steps=config["episode_length"],
+                        max_steps=max_steps,
                         batch_size=config["batch_size"],
                     )
                     eval_returns += episode_return / config["eval_episodes"]

@@ -214,11 +214,8 @@ class Reinforce(Agent):
 
     ** YOU NEED TO IMPLEMENT THE FUNCTIONS IN THIS CLASS **
 
-    :attr critics_net (FCNetwork): fully connected critic network to compute Q-value estimates
-    :attr critics_target (FCNetwork): fully connected target critic network
-    :attr critics_optim (torch.optim): PyTorch optimiser for critics network
-    :attr actors_net (FCNetwork): fully connected actor network for policy
-    :attr actors_optim (torch.optim): PyTorch optimiser for actor network
+    :attr policy (FCNetwork): fully connected network for policy
+    :attr policy_optim (torch.optim): PyTorch optimiser for policy network
     :attr learning_rate (float): learning rate for DQN optimisation
     :attr gamma (float): discount rate gamma
     """

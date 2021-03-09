@@ -76,7 +76,7 @@ if __name__ == "__main__":
         if hlines == False:
             x_min = 0
             x_max = config["total_eps"]
-            plt.hlines(y=8, xmin=x_min, xmax=x_max, colors='k', linestyles='dotted', label="Taxi threshold = 8")
+            plt.hlines(y=7, xmin=x_min, xmax=x_max, colors='k', linestyles='dotted', label="Taxi threshold = 7")
             axes.set_ylim([-200,20])
             hlines = True
 

@@ -1,5 +1,22 @@
 from torch import nn, Tensor
 from typing import Iterable
+import torch
+
+
+class Tanh2(nn.Module):
+    r"""Applies the element-wise tanh function * 2 for output range [-2, 2]
+
+    .. math::
+        2 * \text{Tanh}(x) = 2 * \tanh(x) = 2 * \frac{\exp(x) - \exp(-x)} {\exp(x) + \exp(-x)}
+
+    Shape:
+        - Input: :math:`(N, *)` where `*` means, any number of additional
+          dimensions
+        - Output: :math:`(N, *)`, same shape as the input
+    """
+
+    def forward(self, input: Tensor) -> Tensor:
+        return 2 * torch.tanh(input)
 
 
 class FCNetwork(nn.Module):
